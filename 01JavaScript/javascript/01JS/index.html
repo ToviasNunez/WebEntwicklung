@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <script src="js/myscript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" id="amarillo" class="amarillo" />
+    <link rel="stylesheet" href="rojo.css" id="rojo" class="rojo" />
+    <link rel="stylesheet" href="azul.css" id="rojo" class="rojo" />
+    <title>MyFirstJS</title>
+  </head>
+  <body>
+    <input type="text" id="myName" class="name" />
+    <input type="text" id="myAge" class="age" />
+    <button onclick="getInfo()">add</button>
+    <button onclick="getList()">list</button>
+
+    <div id="idBox" class="box">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+    </div>
+    <button onclick="changSytleBox()">change-Style</button>
+
+    <button onclick="changeStyle()">change-Style-green</button>
+    <script>
+      const elements = document.querySelectorAll(".box");
+      function changeStyle() {
+        elements.forEach(function (element) {
+          element.style.color = "white";
+          element.style.backgroundColor = "green";
+          element.style.margin = "10px 0";
+        });
+      }
+    </script>
+    <div>
+      <p>this is a first paragraph</p>
+      <p>this is a second paragraph</p>
+      <p>you got the point</p>
+    </div>
+
+    <script>
+      let allParas = document.getElementsByTagName("p");
+      for (let index = 0; index < allParas.length; index++) {
+        allParas[index].style.backgroundColor = "yellow";
+      }
+    </script>
+    <button onclick="changeColorParas()">change-Style-p</button>
+
+    <p>this won't be returned!</p>
+    <div id="address">
+      <p>1222 Tegelstr</p>
+      <p>Berlin, DE</p>
+
+      <button onclick="changeStyleAddress()">change-Style-address</button>
+    </div>
+
+    <h2>My First Page</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = "Hello World!";
+    </script>
+    <button onclick="addelemnt()">add-element</button>
+    <button onclick="listfromFil()">list film</button>
+    <button onclick="createPar()">create-paragraph</button>
+
+    <h1>Films</h1>
+
+    <ul id="myList"></ul>
+
+    <button onclick="getFilmList()">listfromFil</button>
+  </body>
+</html>
